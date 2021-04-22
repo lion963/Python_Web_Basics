@@ -14,8 +14,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth.models import User
+from django.shortcuts import render
 from django.urls import path
+
+def index(request):
+    title = 'SoftUni Django TestProject'
+    users = User.objects.all()
+    context = {
+        'title': title,
+        'users': users
+    }
+    return render(request, 'index.html', context)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index)
 ]

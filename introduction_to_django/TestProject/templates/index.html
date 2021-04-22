@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+        h1{color: blue;}
+    </style>
+{#    <script>#}
+{#        setTimeout(function() {alert('It works')}, 5000)#}
+{#    </script>#}
+</head>
+<body>
+    <h1>it works</h1>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.username }}</li>
+        {% endfor %}
+    </ul>
+{#    <p>#}
+{#        <span>123123</span>#}
+{#    </p>#}
+{#    <p>{{ users }}</p>#}
+</body>
+</html>
