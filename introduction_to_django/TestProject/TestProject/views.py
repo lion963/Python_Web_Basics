@@ -25,3 +25,4 @@ class UsersListView(ListView):
         context = super().get_context_data()
         context['title'] = 'SoftUni Django TestProject - from ClassView'
         return context
+
