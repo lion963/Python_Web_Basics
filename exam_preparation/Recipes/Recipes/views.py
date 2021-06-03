@@ -3,12 +3,9 @@ from Recipes.models import Recipe
 
 
 def home_page(request):
-    # try:
-    #     recipes_data = Recipe.objects.get()
-    # except:
-    #     recipes_data = False
     context = {
         'recipes': True
+            # Recipe.objects.all()
     }
     return render(request, 'index.html', context)
 

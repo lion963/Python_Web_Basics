@@ -19,7 +19,7 @@
 <h1>Create Recipe</h1>
 <div class="items-container">
     <div class="item">
-        <form method="POST">
+        <form method="POST">{% csrf_token %}
             <label for="title">Title</label>
             <input type="text" name="title" maxlength="30" required="" id="id_title">
             <label for="imageURL">Image URL</label>
