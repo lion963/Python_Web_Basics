@@ -1,4 +1,4 @@
-"""Recipes URL Configuration
+"""todos_app URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -16,9 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from Recipes.recipes_app.views import home_page, create_recipe, delete_recipe, edit_recipe, details_recipe
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include("Recipes.recipes_app.urls"))
+    path('', include('todos_app.todos.urls'))
 ]

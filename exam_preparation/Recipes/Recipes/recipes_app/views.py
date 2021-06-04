@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from Recipes.models import Recipe
+from Recipes.recipes_app.models import Recipe
 
 
 def home_page(request):
     context = {
-        'recipes': True
-            # Recipe.objects.all()
+        'recipes': Recipe.objects.all()
     }
     return render(request, 'index.html', context)
 
