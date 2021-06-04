@@ -2,9 +2,10 @@ from django.shortcuts import render
 from Recipes.recipes_app.models import Recipe
 
 
-def home_page(request):
+def index(request):
     context = {
-        'recipes': Recipe.objects.all()
+        'recipes': True
+            # Recipe.objects.all()
     }
     return render(request, 'index.html', context)
 
@@ -13,13 +14,13 @@ def create_recipe(request):
     return render(request, 'create.html')
 
 
-def delete_recipe(request):
+def delete(request):
     return render(request, 'delete.html')
 
 
-def edit_recipe(request):
+def edit(request):
     return render(request, 'edit.html')
 
 
-def details_recipe(request):
+def details(request):
     return render(request, 'details.html')
