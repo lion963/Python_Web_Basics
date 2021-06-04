@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo app</title>
+</head>
+<body>
+
+    <h1>My Todo List</h1>
+    {% if todos %}
+        <div class="container">
+           {% for todo in todos %}
+            <div class="todo">
+                <p>{{ todo.id }}</p>
+                <div class="description">{{ todo.text }}</div>
+                {% if todo.state %}
+                    <div class="done">Done</div>
+                {% else %}
+                    <div class="open">NOT DONE</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+{% else %}
+    <h2>No TODOS</h2>
+{% endif %}
+</body>
+</html>
