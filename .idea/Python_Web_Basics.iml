@@ -3,19 +3,20 @@
   <component name="FacetManager">
     <facet type="django" name="Django">
       <configuration>
-        <option name="rootFolder" value="$MODULE_DIR$/python-web-2021-05/django101" />
-        <option name="settingsModule" value="django101/settings.py" />
+        <option name="rootFolder" value="$MODULE_DIR$/exam_preparation/Recipes" />
+        <option name="settingsModule" value="Recipes/settings.py" />
         <option name="manageScript" value="manage.py" />
         <option name="environment" value="&lt;map/&gt;" />
         <option name="doNotUseTestRunner" value="false" />
-        <option name="trackFilePattern" value="migrations" />
+        <option name="trackFilePattern" value="" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.8 (Python_Web_Basics)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (Python_Web_Basics) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="petstagram_workshop" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
