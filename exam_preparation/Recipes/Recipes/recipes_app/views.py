@@ -11,6 +11,18 @@ def index(request):
 
 
 def create_recipe(request):
+    # title = request.POST.title
+    # image_url = request.POST.image_url
+    # description = request.POST.description
+    # ingredients = request.POST.ingredients
+    # time = request.POST.time
+    # Recipe(
+    #     title=title,
+    #     image_url=image_url,
+    #     description=description,
+    #     ingredients=ingredients,
+    #     time=time
+    # ).save()
     return render(request, 'create.html')
 
 
