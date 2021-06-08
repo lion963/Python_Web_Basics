@@ -1,7 +1,7 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>Recipes</title>
 </head>
 
@@ -9,9 +9,9 @@
      
  <nav>
     <ul>
-        <img src="./static/images/chef.png" alt="chef">
+        <img src="/static/images/chef.png" alt="chef">
         <li class="title"><a href="/">Recipes</a></li>
-        <li><a href="./create">Add Recipe</a></li>
+        <li><a href="/create">Add Recipe</a></li>
     </ul>
 </nav>
     <div class="container">
@@ -19,7 +19,7 @@
 <h1>Create Recipe</h1>
 <div class="items-container">
     <div class="item">
-        <form method="POST" action="./create_recipe">
+        <form method="POST" action="/create_recipe">
             {% csrf_token %}
             <label for="title">Title</label>
             <input type="text" name="title" maxlength="30" required="" id="id_title">

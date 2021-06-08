@@ -28,15 +28,27 @@ def create_recipe(request):
         time=time
     )
     recipe.save()
-    return redirect('')
+    return redirect('/')
+
+def edit(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    context = {
+        'recipe': recipe
+    }
+    return render(request, 'edit.html', context)
+
+def edit_recipe(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    recipe.title = request.POST['title']
+    recipe.image_url = request.POST['image_url']
+    recipe.description = request.POST['description']
+    recipe.ingredients = request.POST['ingredients']
+    recipe.time = request.POST['time']
+    recipe.save()
+    return redirect('/')
 
 def delete(request):
     return render(request, 'delete.html')
-
-
-def edit(request):
-    return render(request, 'edit.html')
-
 
 def details(request):
     return render(request, 'details.html')
