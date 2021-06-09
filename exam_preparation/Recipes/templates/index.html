@@ -27,9 +27,9 @@
                     <div class="recipe-info">{{ recipe.description }}
                     </div>
                     <div class="buttons-container">
-                        <a class="button detail" href="/details">Details</a>
+                        <a class="button detail" href="/details/{{ recipe.id }}">Details</a>
                         <a class="button edit" href="/edit/{{ recipe.id }}">Edit</a>
-                        <a class="button delete" href="/delete">Delete</a>
+                        <a class="button delete" href="/delete/{{ recipe.id }}">Delete</a>
                     </div>
                 </div>
             </div>

@@ -11,44 +11,54 @@ def index(request):
 
 
 def create(request):
+    if request.POST.get('Create_button'):
+        title = request.POST['title']
+        image_url = request.POST['image_url']
+        description = request.POST['description']
+        ingredients = request.POST['ingredients']
+        time = request.POST['time']
+        recipe = Recipe(
+            title=title,
+            image_url=image_url,
+            description=description,
+            ingredients=ingredients,
+            time=time
+        )
+        recipe.save()
+        return redirect('/')
     return render(request, 'create.html')
-
-
-def create_recipe(request):
-    title = request.POST['title']
-    image_url = request.POST['image_url']
-    description = request.POST['description']
-    ingredients = request.POST['ingredients']
-    time = request.POST['time']
-    recipe = Recipe(
-        title=title,
-        image_url=image_url,
-        description=description,
-        ingredients=ingredients,
-        time=time
-    )
-    recipe.save()
-    return redirect('/')
 
 def edit(request, pk):
     recipe = Recipe.objects.get(pk=pk)
     context = {
         'recipe': recipe
     }
+    if request.POST.get('Edit_button'):
+        recipe.title = request.POST['title']
+        recipe.image_url = request.POST['image_url']
+        recipe.description = request.POST['description']
+        recipe.ingredients = request.POST['ingredients']
+        recipe.time = request.POST['time']
+        recipe.save()
+        return redirect('/')
     return render(request, 'edit.html', context)
 
-def edit_recipe(request, pk):
+def delete(request, pk):
     recipe = Recipe.objects.get(pk=pk)
-    recipe.title = request.POST['title']
-    recipe.image_url = request.POST['image_url']
-    recipe.description = request.POST['description']
-    recipe.ingredients = request.POST['ingredients']
-    recipe.time = request.POST['time']
-    recipe.save()
-    return redirect('/')
+    context = {
+        'recipe': recipe
+    }
+    if request.POST.get('Delete_button'):
+        recipe.delete()
+        return redirect('/')
+    return render(request, 'delete.html', context)
 
-def delete(request):
-    return render(request, 'delete.html')
 
-def details(request):
-    return render(request, 'details.html')
+def details(request, pk):
+    recipe = Recipe.objects.get(pk=pk)
+    ingredients = recipe.ingredients.split(', ')
+    context = {
+        'recipe': recipe,
+        'ingredients_list': ingredients
+    }
+    return render(request, 'details.html', context)

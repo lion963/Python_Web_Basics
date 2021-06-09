@@ -19,7 +19,7 @@
 <h1>Create Recipe</h1>
 <div class="items-container">
     <div class="item">
-        <form method="POST" action="/create_recipe">
+        <form method="POST" action="{% url 'create'%}">
             {% csrf_token %}
             <label for="title">Title</label>
             <input type="text" name="title" maxlength="30" required="" id="id_title">
@@ -31,7 +31,7 @@
             <input type="text" name="ingredients" maxlength="250" required="" id="id_ingredients">
             <label for="time">Time (Minutes)</label>
             <input type="number" name="time" required="" id="id_time">
-            <input type="submit" value="Create">
+            <input type="submit" name='Create_button' value="Create">
         </form>
     </div>
 </div>
