@@ -1,4 +1,4 @@
-"""todos_app URL Configuration
+"""book URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('todos/', include('todos_app.todos.urls'))
+    path('', include('book.book_app.urls'))
 ]
