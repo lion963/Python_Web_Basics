@@ -19,6 +19,7 @@
     <h1 class="display-4 text-center">Edit the book</h1>
     <form method="post" class="m-auto w-25">
         {% csrf_token %}
+        {{ form.errors }}
         <div class="form-group">
             <label for="id_title">Title</label>
             {{ form.title }}

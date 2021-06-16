@@ -23,6 +23,7 @@ def create(request):
         book = form.save()
         book.save()
         return redirect('create')
+    return render(request, 'create.html', {'form': form})
 
 def edit(request, pk):
     book = Book.objects.get(pk=pk)
@@ -34,3 +35,4 @@ def edit(request, pk):
         book = form.save()
         book.save()
         return redirect(f'/edit/{pk}')
+    return render(request, 'edit.html', {'form': form})
