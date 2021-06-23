@@ -99,3 +99,5 @@ def delete_expenses(request,pk):
         return render(request, 'expense-edit.html', {'form': form})
     expense.delete()
     return redirect('home')
+
+
