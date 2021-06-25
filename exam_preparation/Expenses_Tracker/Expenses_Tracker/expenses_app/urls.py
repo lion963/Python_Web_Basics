@@ -12,3 +12,4 @@ urlpatterns = [
     path('edit/<int:pk>', edit_expenses, name='edit expenses'),
     path('delete/<int:pk>', delete_expenses, name='delete expenses'),
 ]
+
