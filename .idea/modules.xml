@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Python_Web_Basics.iml" filepath="$PROJECT_DIR$/.idea/Python_Web_Basics.iml" />
       <module fileurl="file://$PROJECT_DIR$/../petstagram_workshop/.idea/petstagram_workshop.iml" filepath="$PROJECT_DIR$/../petstagram_workshop/.idea/petstagram_workshop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python-web-2021-05/.idea/python-web-2021-05.iml" filepath="$PROJECT_DIR$/../python-web-2021-05/.idea/python-web-2021-05.iml" />
     </modules>
   </component>
 </project>
